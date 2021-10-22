@@ -6,9 +6,10 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide-core.min.css">
+    <link rel="stylesheet" href="./node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <!-- <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script> -->
+    <!-- <script src="./node_modules/@"></script> -->
     
 </head>
 <body>
@@ -150,37 +151,29 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <div class="splide">
-                        <div class="splide__arrows">
-                            <button class="splide__arrow splide__arrow--prev">
-                                Prev
-                            </button>
-                            <button class="splide__arrow splide__arrow--next">
-                                Next
-                            </button>
-                        </div>
-
-                        <div class="splide__track">
-                          <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="splide__slide__container carousel1">
-                                    <img src="./img/carousel1.jpg" alt="" class="carousel__pic">
-                                </div>
+                    <div class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                          <ul class="glide__slides">
+                            <li class="glide__slide">
+                                <img src="./img/carousel1.jpg" alt="" class="carousel__pic">
                             </li>
-                            <li class="splide__slide">
-                                <div class="splide__slide__container">
-                                    <img src="./img/carousel2.jpg" alt="" class="carousel__pic">
-                                </div>
+                            <li class="glide__slide">
+                                <img src="./img/carousel2.jpg" alt="" class="carousel__pic">
                             </li>
-                            <li class="splide__slide">
-                                <div class="splide__slide__container">
-                                    <img src="./img/carousel3.jpg" alt="" class="carousel__pic">
-                                </div>
+                            <li class="glide__slide">
+                                <img src="./img/carousel3.jpg" alt="" class="carousel__pic">
                             </li>
-
                           </ul>
                         </div>
+
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                          </div>
                       </div>
+
+
+                    
                 </div>
             </div>
 
@@ -190,7 +183,9 @@
     </section>
 
 
-
+    <script src="./node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script src="./scripts/script.js"></script>
+
+    
 </body>
 </html>

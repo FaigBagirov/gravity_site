@@ -214,5 +214,18 @@ ul, li{
 
 .carousel__pic{
   width: 100%;
-  /* object-fit: cover; */
+  object-fit: cover;
+}
+
+.glide__slide{
+  opacity: 0.3;
+  transition-duration: 0.7s;
+  height: 35vw;
+}
+.glide__slide--active{
+  opacity: 1;
+}
+
+.glide__arrows{
+  display: flex;
 }
