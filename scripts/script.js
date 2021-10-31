@@ -1,7 +1,18 @@
 document.addEventListener( 'DOMContentLoaded', function() {
-  var glide =  new Glide('.glide', {
+  var glide1 =  new Glide('.glide1', {
     type: 'carousel',
     perView: 1.3,
+    gap: '30',
+    breakpoints: {
+      768: {
+          perView: 1
+        }
+      }
+  });
+
+  var glide2 =  new Glide('.glide2', {
+    type: 'slide',
+    perView: 1,
     gap: '30',
   });
 
@@ -9,13 +20,13 @@ document.addEventListener( 'DOMContentLoaded', function() {
   let playButton = document.querySelector('.slider__playBtn > img');
   // activeSLide = document.querySelector('glide__slide--active');
 
-  glide.on('build.after', function() {
+  glide1.on('build.after', function() {
     playButton.style.display = 'block';
     playButton.style.opacity = '1';
   });
 
   //hide play icon when swiping the slides
-  glide.on('swipe.start', function() {
+  glide1.on('swipe.start', function() {
     playButton.style.transitionDuration = '0s';
     playButton.style.opacity = '0';
   });
@@ -28,13 +39,14 @@ document.addEventListener( 'DOMContentLoaded', function() {
   //     });
   // });
 
-  glide.on('swipe.end', function() {
+  glide1.on('swipe.end', function() {
     // console.log('another move ended');
     playButton.style.transitionDuration = '1s';
     playButton.style.opacity = '1'; 
 
   });
 
- glide.mount()
+ glide1.mount()
+ glide2.mount()
 
 });
